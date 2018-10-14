@@ -11,6 +11,7 @@ const replaceSuffixPattern = /--(active|big|small|very-big)/g;
 
 const icons = {
   home: [navIconSize, AntDesign],
+  dashboard: [navIconSize, AntDesign],
   search1: [navIconSize, AntDesign]
 };
 

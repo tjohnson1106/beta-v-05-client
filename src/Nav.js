@@ -20,6 +20,12 @@ export default class Nav {
           icon: iconsMap.home
         },
         {
+          label: "Collections",
+          screen: "client.CollectionScreen",
+          title: "Saga",
+          icon: iconsMap.dashboard
+        },
+        {
           label: "Explore",
           screen: "client.ExploreScreen",
           title: "Saga",
