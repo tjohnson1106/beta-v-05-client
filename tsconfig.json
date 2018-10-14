@@ -13,9 +13,11 @@
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "allowJs": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "lib": ["es2015", "dom", "es2015.promise"],
+    "removeComments": false
   },
   "exclude": ["node_modules", "index.js", "dist"]
 }
