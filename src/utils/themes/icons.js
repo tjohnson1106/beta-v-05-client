@@ -2,10 +2,6 @@ import * as React from "react";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { Platform, PixelRatio } from "react-native";
 
-// interface Promise<T> {
-//     readonly [Symbol.toStringTag]: "Promise";
-// }
-
 const navIconSize =
   __DEV__ === false && Platform.OS === "android"
     ? PixelRatio.getPixelSizeForLayoutSize(25)
@@ -19,11 +15,10 @@ const icons = {
 };
 
 const iconsMap = {};
-
 const iconsLoaded = new Promise((resolve, reject) => {
   new Promise.all(
     Object.keys(icons).map(iconName => {
-      const Provider = icons[iconName][1] || defaultIconProvider;
+      const Provider = icons[iconName][1];
       return Provider.getImageSource(
         iconName.replace(replaceSuffixPattern, ""),
         icons[iconName][0]
