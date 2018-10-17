@@ -1,11 +1,13 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View } from "react-native";
+
+import { StoryCard } from "../../components";
 
 class FeedsScreen extends React.Component {
   render() {
     return (
       <View>
-        <Text>Feeds</Text>
+        <StoryCard />
       </View>
     );
   }
