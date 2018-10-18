@@ -1,14 +1,14 @@
-import * as React from "react";
-import { View } from "react-native";
+import React, { Component } from "react";
+import { ScrollView } from "react-native";
 
 import { StoryCard } from "../../components";
 
-class FeedsScreen extends React.Component {
+class FeedsScreen extends Component {
   render() {
     return (
-      <View>
+      <ScrollView>
         <StoryCard />
-      </View>
+      </ScrollView>
     );
   }
 }
