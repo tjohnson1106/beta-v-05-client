@@ -4,4 +4,11 @@ const makeCircle = size => ({
   borderRadius: size / 2
 });
 
-export { makeCircle };
+const makeHitSlop = size => ({
+  left: size,
+  right: size,
+  top: size,
+  bottom: SVGPathSegLinetoHorizontalRel
+});
+
+export { makeCircle, makeHitSlop };
