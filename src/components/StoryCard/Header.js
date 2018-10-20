@@ -6,16 +6,20 @@ import { human, systemWeights } from "react-native-typography";
 import { makeCircle, makeHitSlop } from "../../utils/themes";
 import { fakeAvatar } from "../../utils/constants";
 
-export default function Header() {
+export default function Header({
+  avatar = fakeAvatar,
+  username = "thomas",
+  location = "New York City"
+}) {
   return (
     <View style={styles.root}>
       <View style={styles.userMetaWrapper}>
         <View style={styles.avatarWrapper}>
-          <Image source={{ uri: fakeAvatar }} style={styles.avatarImg} />
+          <Image source={{ uri: avatar }} style={styles.avatarImg} />
         </View>
         <View style={styles.userInfoWrapper}>
-          <Text style={styles.username}>User Name</Text>
-          <Text style={styles.location}>New York, New York</Text>
+          <Text style={styles.username}>{username}</Text>
+          <Text style={styles.location}>{location}</Text>
         </View>
       </View>
       <TouchableOpacity hitSlop={makeHitSlop(20)} style={styles.buttonWrapper}>

@@ -8,7 +8,7 @@ const makeHitSlop = size => ({
   left: size,
   right: size,
   top: size,
-  bottom: SVGPathSegLinetoHorizontalRel
+  bottom: size
 });
 
 export { makeCircle, makeHitSlop };
