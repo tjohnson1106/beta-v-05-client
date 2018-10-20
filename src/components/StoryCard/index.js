@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
 import Header from "./Header";
+import ActionButtons from "./ActionButtons";
 
 class StoryCard extends PureComponent {
   state = {};
@@ -16,7 +17,7 @@ class StoryCard extends PureComponent {
               "https://res.cloudinary.com/bracket-factory/image/upload/v1532454234/saga/pexels-photo-210492.jpg"
           }}
         />
-        <Text>StoryCard</Text>
+        <ActionButtons />
       </View>
     );
   }
