@@ -7,7 +7,7 @@ export default function WithProvider(WrappedComponent) {
   return class Cp extends Component {
     render() {
       return (
-        <ApolloProvider>
+        <ApolloProvider client={client}>
           <WrappedComponent {...this.props} />
         </ApolloProvider>
       );
