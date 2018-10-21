@@ -1,12 +1,18 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+import React, { Component } from "react";
+import { ScrollView } from "react-native";
 
-class FeedsScreen extends React.Component {
+import { StoryCard } from "../../components";
+
+class FeedsScreen extends Component {
   render() {
     return (
-      <View>
-        <Text>Feeds</Text>
-      </View>
+      <ScrollView
+        contentContainerStyle={{
+          paddingBottom: 100
+        }}
+      >
+        <StoryCard />
+      </ScrollView>
     );
   }
 }
