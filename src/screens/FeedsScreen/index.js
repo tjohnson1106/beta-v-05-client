@@ -6,7 +6,11 @@ import { StoryCard } from "../../components";
 class FeedsScreen extends Component {
   render() {
     return (
-      <ScrollView>
+      <ScrollView
+        contentContainerStyle={{
+          paddingBottom: 100
+        }}
+      >
         <StoryCard />
       </ScrollView>
     );
