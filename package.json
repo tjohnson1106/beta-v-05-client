@@ -11,7 +11,13 @@
     "flow-stop": "flow stop"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.3.5",
+    "apollo-client": "^2.4.2",
+    "apollo-link-http": "^1.5.5",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
     "react": "16.6.0-alpha.8af6728",
+    "react-apollo": "^2.2.4",
     "react-native": "0.57.3",
     "react-native-navigation": "1.x.x",
     "react-native-typography": "^1.4.0",
