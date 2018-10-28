@@ -1,4 +1,3 @@
-import * as React from "react";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { Platform, PixelRatio } from "react-native";
 
@@ -16,20 +15,21 @@ const icons = {
 };
 
 const iconsMap = {};
-const iconsLoaded = new Promise((resolve, reject) => {
-  new Promise.all(
-    Object.keys(icons).map(iconName => {
-      const Provider = icons[iconName][1];
-      return Provider.getImageSource(
-        iconName.replace(replaceSuffixPattern, ""),
-        icons[iconName][0]
-      );
-    })
-  ).then(sources => {
-    Object.keys(icons).forEach((iconName, idx) => (iconsMap[iconName] = sources[idx]));
+const iconsLoaded = () =>
+  new Promise(resolve => {
+    new Promise.all(
+      Object.keys(icons).map(iconName => {
+        const Provider = icons[iconName][1];
+        return Provider.getImageSource(
+          iconName.replace(replaceSuffixPattern, ""),
+          icons[iconName][0]
+        );
+      })
+    ).then(sources => {
+      Object.keys(icons).forEach((iconName, idx) => (iconsMap[iconName] = sources[idx]));
 
-    resolve(true);
+      resolve(true);
+    });
   });
-});
 
 export { iconsMap, iconsLoaded };
