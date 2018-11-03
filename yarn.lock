@@ -4940,6 +4940,11 @@ react-is@^16.6.0-alpha.8af6728:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.0-alpha.8af6728.tgz#3ce01f13f164b90a76ad902735834fc12d06e30e"
   integrity sha512-F65AeMavskvRglteO7dC0Nvq3Br1ESnpCOG5M6fenQX52Uhpt6eCI0vL3ICM/hnVhIOQY2fwnSWtST33OlgxVA==
 
+react-native-linear-gradient@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.4.3.tgz#a7f5fe685b1a2ac788cca37828c5c9ca91357a16"
+  integrity sha512-c1V5HMz9RWMaHA6hHQmwQqWNDJAGdhQG52Ht3wxp7XIAnqK4eJhPnuEjp6zI40eqYVqzmenZ8dU/PgXUVpg2ZQ==
+
 react-native-navigation@1.x.x:
   version "1.1.488"
   resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-1.1.488.tgz#12d361125e1457052016d52efae4ba8c7ccccefd"
