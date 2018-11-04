@@ -1,5 +1,3 @@
-// @flow
-
 import React, { Component } from "react";
 import {
   View,
@@ -11,20 +9,21 @@ import {
   TouchableOpacity,
   Button
 } from "react-native";
-import { iOSColors } from "react-native-typography";
+import { iOSColors, human, systemWeights } from "react-native-typography";
 import LinearGradient from "react-native-linear-gradient";
+import AntDesign from "react-native-vector-icons/AntDesign";
 
 import { fonts } from "../../utils/themes";
 
 const COLOR_GRADIENTS = ["#5187fb", "#2f7083"];
 
-const BUTTON_GRADIENTS = ["#5187fb", "#7159ab", "#5e3563", "#361c2c"];
+const BUTTON_GRADIENTS = ["#5187fb60", "#b4daff", "#00156c60", "#e6f4f1"];
 
 class LoginScreen extends Component {
   render() {
     return (
       <View style={styles.root}>
-        <StatusBar barStyle="default" hidden={true} />
+        <StatusBar barStyle="dark-content" />
         <LinearGradient
           start={{
             x: 0.0,
@@ -60,6 +59,31 @@ class LoginScreen extends Component {
                 <Text style={styles.loginButtonText}>Login</Text>
               </LinearGradient>
             </TouchableOpacity>
+            <View style={styles.forgotWrapper}>
+              <Text style={styles.forgotText}>Forgot your login details? </Text>
+              <TouchableOpacity>
+                <Text style={styles.helpText}> Get help signing in.</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+          <View style={styles.orWrapper}>
+            <View style={styles.orDivider} />
+            <View style={styles.orTextWrapper}>
+              <Text style={styles.orText}>OR</Text>
+            </View>
+            <View style={styles.orDivider} />
+          </View>
+          <View style={[styles.section, styles.sectionBottom]}>
+            <TouchableOpacity style={styles.facebookLoginButton}>
+              <AntDesign size={30} name="facebook-square" color="#5187fb" />
+              <Text style={styles.facebookLoginButtonText}> Continue With Facebook</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.noAccountWrapper}>
+            <Text style={styles.accountInquiryText}>Don't have an account? </Text>
+            <TouchableOpacity>
+              <Text style={styles.helpText}>Sign up here.</Text>
+            </TouchableOpacity>
           </View>
         </ImageBackground>
       </View>
@@ -90,11 +114,16 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%"
   },
+
   section: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     alignSelf: "stretch"
+  },
+  sectionBottom: {
+    flex: 0.7,
+    justifyContent: "flex-start"
   },
   inputWrapper: {
     height: 45,
@@ -127,6 +156,69 @@ const styles = StyleSheet.create({
   },
   loginButtonText: {
     color: iOSColors.white
+  },
+  forgotWrapper: {
+    marginVertical: 10,
+    flexDirection: "row"
+  },
+  helpText: {
+    ...human.footnoteObject,
+    ...systemWeights.semibold,
+    color: "#318DEE"
+  },
+  forgotText: {
+    ...human.footnoteObject,
+    ...systemWeights.bold,
+    color: "#318DEE",
+    fontSize: 12.75
+  },
+  orWrapper: {
+    width: "90%",
+    marginVertical: 10,
+    flexDirection: "row",
+    alignSelf: "center",
+    alignItems: "center"
+  },
+  orDivider: {
+    height: 1,
+    width: "100%",
+    flex: 1,
+    backgroundColor: "#E4E4E4"
+  },
+  orTextWrapper: {
+    flex: 0.5,
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  orText: {
+    ...systemWeights.semibold,
+    color: iOSColors.gray
+  },
+
+  facebookLoginButton: {
+    flexDirection: "row",
+    height: 50,
+    alignItems: "center"
+  },
+  // TODO:  Find text color that displays properly
+  facebookLoginButtonText: {
+    color: "#5187fb",
+    ...human.calloutObject,
+    ...systemWeights.semibold
+  },
+  noAccountWrapper: {
+    height: 50,
+    width: "100%",
+    borderColor: "#ECECEC",
+    borderTopWidth: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row"
+  },
+  accountInquiryText: {
+    ...human.footnoteObject,
+    ...systemWeights.bold,
+    color: iOSColors.midGray
   }
 });
 
